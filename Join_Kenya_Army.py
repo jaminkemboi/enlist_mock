@@ -69,6 +69,7 @@ def age_limit():
         print()
         time.sleep(1)
         print("You are eligible to join the military!")
+        print("Please log into our recruitment website " + check_website() + " and fill out the forms.")
 
     else:
         print()
@@ -79,20 +80,25 @@ def age_limit():
         age_limit()
 
 
+def check_website():
+    url_link = "http://www.mod.go.ke/?page_id=11474"
+    return url_link
+
+
 # main method/function to run the other methods
 # prints welcome message
 def main():
-    print("******************")
+    print("**************************************************")
     print("\t\t\t\t THE KENYA ARMY! \t\t\t")
-    print("******************")
+    print("**************************************************")
     print("\t Come join the Greatest Team on Earth! \t\t")
     print("\t\t\t Recruitment Fair! \t\t\t")
-    print("******************")
+    print("**************************************************")
     enlist_or_nah()
     print()
     age_limit()
 
 
 # this prints everything in main method (to include the entire program)
-if _name_ == "_main_":
+if __name__ == "__main__":
     main()
