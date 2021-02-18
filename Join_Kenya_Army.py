@@ -43,29 +43,30 @@ def age_limit():
     age = float(input("How old are you: "))
 
     # eligibility age
-    eligibility_age = "17 to 35"
+    eligibility_age = "18 to 26"
 
     # raise Value Error if age is <=0
     if age <= 0:
-        raise ValueError("Age cannot be <= 0!")
+        print("Age cannot be <= 0!"+"\nRestart the program again.")
+		
 
     # if age is >= 35, too old to join
-    elif age >= 35:
+    elif age >= 26:
         print()
         time.sleep(1)
         print("You are too old to join the military")
         print("(Eligibility age to join is between " + eligibility_age + " years old.)")
 
     # if age <= 16, too young to join and give time remaining
-    elif age <= 16:
-        remainder = (17 - age)
+    elif age <= 18:
+        remainder = (18 - age)
         print()
         time.sleep(1)
         print("You are too young, try again in the next " + str(remainder) + " year(s).")
         print("(Eligibility age to join is between " + eligibility_age + " years old.)")
 
     # if age is between 17 - 35, eligible to join
-    elif 17 <= age <= 35:
+    elif 18 <= age <= 26:
         print()
         time.sleep(1)
         print("You are eligible to join the military!")
@@ -97,6 +98,7 @@ def main():
     enlist_or_nah()
     print()
     age_limit()
+    check_website()
 
 
 # this prints everything in main method (to include the entire program)
